@@ -1,12 +1,49 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC');
+
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
   padding: 20px;
   background-color: #eee;
-  font-family: 'Open Sans', sans-serif;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.title {
+  color: red;
+  margin-right: 5px;
+}
+
+.title_emph {
+  font-size: 13.28px;
+  color: #7510f7;
+}
+
+/* Transition Timing Funtions */
+.ease {
+  transition-timing-function: ease;
+}
+
+.ease_in {
+  transition-timing-function: ease-in;
+}
+
+.ease_in_out {
+  transition-timing-function: ease-in-out;
+}
+
+.ease_out {
+  transition-timing-function: ease-out;
+}
+
+.linear {
+  transition-timing-function: linear;
 }
