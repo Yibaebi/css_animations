@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../CSS/transitions.css" />
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <h4>CSS Transition Timing Function</h4>
+    <h5 style="margin-bottom: 10px">
+      <span class="title">*</span>Hover on cards to see the effect of timing
+      functions of the various transitions.
+    </h5>
+    <div class="box-container">
+      <aside class="box ease">Ease</aside>
+      <aside class="box ease_in">Ease-in</aside>
+      <aside class="box ease_in_out">Ease-in-out</aside>
+      <aside class="box ease_out">Ease-out</aside>
+      <aside class="box linear">Linear</aside>
+    </div>
+
+    <h4 style="margin-top: 50px">
+      CSS Transitions on Multiple Properties without delay
+    </h4>
+    <h5 style="margin-bottom: 10px">
+      <span class="title">*</span>Hover on card to see the transition of the
+      background color and its position.
+    </h5>
+    <div class="box-container">
+      <aside class="box ease_in multiple">Ease-in-out</aside>
+    </div>
+
+    <!-- With even mult-->
+    <h4 style="margin-top: 50px">
+      CSS Transitions on Multiple Properties with delay
+    </h4>
+    <h5 style="margin-bottom: 10px">
+      <span class="title">*</span>Hover on card to see the transition of the
+      background color and its position.
+      <span class="title_emph">(Delay between transitions: 2s)</span>
+    </h5>
+    <div class="box-container">
+      <aside class="box linear multiple_delay">Linear</aside>
+    </div>
+
+    <!--  -->
+    <h4 style="margin-top: 50px">CSS Transitions on the transforms property</h4>
+    <h5 style="margin-bottom: 10px">
+      <span class="title">*</span>Hover on card to see the box move in the X and
+      Y direction at the same time. Accepts two values
+      <span class="title_emph">(Timing Function: ease-out)</span>
+    </h5>
+    <div class="box-container transform">
+      <aside class="box trans_X_Y">X: 100px <br />Y: 167px</aside>
+    </div>
+    <h5 style="margin-bottom: 10px; margin-top: 10px">
+      <span class="title">*</span>Scale Property
+      <span class="title_emph">(Timing Function: linear)</span>
+    </h5>
+    <div class="box-container transform">
+      <aside class="box linear trans_scale">Scale - 1.2x</aside>
+    </div>
+    <h5 style="margin-bottom: 10px; margin-top: 10px">
+      <span class="title">*</span>Rotate
+      <span class="title_emph">(Timing Function: Ease out)</span>
+    </h5>
+    <div class="box-container transform">
+      <aside class="box ease_out trans_rotate">Rotate - 90deg</aside>
+    </div>
+    <h5 style="margin-bottom: 10px; margin-top: 10px">
+      <span class="title">*</span>Skew
+      <span class="title_emph">(Timing Function: Ease)</span>
+    </h5>
+    <div class="box-container transform">
+      <aside class="box ease trans_skew">Skew - (X: 20deg; Y: 10deg)</aside>
+    </div>
+    <!--  -->
+    <h4 style="margin-top: 50px">
+      How the "tranforms-origin" affect CSS Transitions on the "Transform"
+      property
+    </h4>
+    <h5 style="margin-bottom: 10px">
+      <span class="title">*</span>Creates a pivot or reference point from which
+      the transition occurs
+      <span class="title_emph">(Timing Function: linear)</span>
+    </h5>
+    <div class="box-container transform-origin">
+      <aside class="box linear trans_origin default">Default</aside>
+    </div>
+    <div class="box-container transform-origin">
+      <aside class="box linear trans_origin top">Top</aside>
+    </div>
+    <div class="box-container transform-origin">
+      <aside class="box linear trans_origin top_left">Top Left</aside>
+    </div>
+    <div class="box-container transform-origin">
+      <aside class="box linear trans_origin top_right">Top Right</aside>
+    </div>
+    <div class="box-container transform-origin">
+      <aside class="box linear trans_origin right">Right</aside>
+    </div>
+    <div class="box-container transform-origin">
+      <aside class="box linear trans_origin bottom">Bottom</aside>
+    </div>
+    <div class="box-container transform-origin">
+      <aside class="box linear trans_origin bottom_right">Bottom Right</aside>
+    </div>
+    <div class="box-container transform-origin">
+      <aside class="box linear trans_origin bottom_left">Bottom Left</aside>
+    </div>
+    <div class="box-container transform-origin">
+      <aside class="box linear trans_origin left">Left</aside>
+    </div>
+    <div class="box-container transform-origin">
+      <aside class="box linear trans_origin with_percentage">
+        X: 30% <br />Y: 10% <br />
+        <span style="margin-top: 10px" class="title"
+          ><span class="title_emph">Accepts Pixel values too</span></span
+        >
+        <span class="title"
+          ><span class="title_emph">Accepts Relative values too</span></span
+        >
+      </aside>
+    </div>
+    <!--  -->
+    <h4 style="margin-top: 50px">CSS 3D Transforms</h4>
+    <h5 style="margin-bottom: 10px">
+      <span class="title">*</span>Hover on card to see the box move 300px to us
+      (Z-axis) with a starting position of 300px away from our eyes
+      (Perspective)
+      <span class="title_emph">(Timing Function: ease-out)</span>
+    </h5>
+    <div class="box-container transform-origin perspective">
+      Perspective: 600px
+      <aside class="box trans_Z">Z: 150px</aside>
+    </div>
+  </body>
+</html>

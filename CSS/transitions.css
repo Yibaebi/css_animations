@@ -1,0 +1,264 @@
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.title {
+  color: red;
+  margin-right: 5px;
+}
+
+.title_emph {
+  font-size: 13.28px;
+  color: #7510f7;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.box-container.transform,
+.box-container.transform-origin {
+  width: 400px;
+  height: 400px;
+  background-color: #7410f744;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.box-container.transform-origin {
+  width: 250px;
+  height: 250px;
+  background-color: #7410f744;
+}
+.box-container.transform-origin.perspective {
+  perspective: 600px;
+}
+
+/* Box Styles */
+
+.box {
+  width: 150px;
+  height: 50px;
+  background-color: #020c1b;
+  color: white;
+  border-radius: 5px;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: 2s;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.box.multiple {
+  transition: background-color 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.box.multiple_delay {
+  transition: background-color 2s ease-in-out, transform 2s ease-in-out 2s;
+}
+
+.box.trans_X_Y,
+.box.trans_Z {
+  width: 200px;
+  height: unset;
+  padding: 10px 0px;
+  transition: transform 2s ease-out;
+}
+
+.box.trans_Z {
+  width: 100px;
+  height: 100px;
+}
+
+.box.trans_scale {
+  transition: transform 0.5s ease-out;
+}
+
+.box.trans_rotate,
+.box.trans_origin,
+.box.trans_skew {
+  width: 200px;
+  height: 200px;
+}
+
+.box.trans_origin {
+  position: relative;
+}
+
+.box.trans_origin::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.box.trans_skew {
+  width: 250px;
+  height: 250px;
+}
+
+/* Hover styles */
+
+.box:hover {
+  transform: translateX(600px);
+}
+
+/* multiple props with delay */
+.box.multiple:hover {
+  background-color: #007bff;
+  transform: translateX(600px);
+}
+
+/* multiple props with delay  */
+.box.multiple_delay:hover {
+  background-color: #007bff;
+  transform: translateX(600px);
+}
+
+/* Transition of the transform property */
+.box.trans_X_Y:hover {
+  transform: translate(100px, 167px);
+}
+.box.trans_Z:hover {
+  transform: translateZ(150px);
+}
+.box.trans_scale:hover {
+  transform: scale(1.2);
+}
+.box.trans_rotate:hover {
+  transform: rotate(90deg);
+}
+.box.trans_skew:hover {
+  transform: skew(20deg, 10deg);
+}
+.box.trans_origin:hover {
+  transform: rotate(-10deg);
+}
+
+/* 
+*** 
+  TRANSFORM ORIGIN
+*** 
+*/
+
+.box.trans_origin.default::after {
+  display: none;
+}
+
+/* ---------------------------- */
+
+.box.trans_origin.top {
+  transform-origin: top;
+}
+.box.trans_origin.top::after {
+  top: -10px;
+}
+.box.trans_origin.top_left {
+  transform-origin: top left;
+}
+.box.trans_origin.top_left::after {
+  top: -10px;
+  left: -10px;
+}
+.box.trans_origin.top_right {
+  transform-origin: top right;
+}
+.box.trans_origin.top_right::after {
+  top: -10px;
+  right: -10px;
+}
+
+/* ---------------------------- */
+
+.box.trans_origin.right {
+  transform-origin: right;
+}
+.box.trans_origin.right::after {
+  right: -10px;
+}
+
+/* ---------------------------- */
+
+.box.trans_origin.bottom {
+  transform-origin: bottom;
+}
+.box.trans_origin.bottom::after {
+  bottom: -10px;
+}
+.box.trans_origin.bottom_left {
+  transform-origin: bottom left;
+}
+.box.trans_origin.bottom_left::after {
+  bottom: -10px;
+  left: -10px;
+}
+.box.trans_origin.bottom_right {
+  transform-origin: bottom right;
+}
+.box.trans_origin.bottom_right::after {
+  bottom: -10px;
+  right: -10px;
+}
+
+/* ---------------------------- */
+
+.box.trans_origin.left {
+  transform-origin: left;
+}
+.box.trans_origin.left::after {
+  left: -10px;
+}
+
+/* ---------------------------- */
+
+.box.trans_origin.with_percentage {
+  transform-origin: 30% 10%;
+}
+.box.trans_origin.with_percentage:hover {
+  transform: rotate(360deg);
+}
+.box.trans_origin.with_percentage::after {
+  left: 30%;
+  top: 10%;
+}
+
+/* 
+*** 
+  <------ END ------>
+*** 
+*/
+
+/* Box 1 */
+.ease {
+  transition-timing-function: ease;
+}
+/* Box 2 */
+.ease_in {
+  transition-timing-function: ease-in;
+}
+/* Box 3 */
+.ease_in_out {
+  transition-timing-function: ease-in-out;
+}
+/* Box 4 */
+.ease_out {
+  transition-timing-function: ease-out;
+}
+/* Box 5 */
+.linear {
+  transition-timing-function: linear;
+}
