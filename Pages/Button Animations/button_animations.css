@@ -12,7 +12,8 @@
   overflow: hidden;
 }
 
-.button::after {
+.button::after,
+.button::before {
   position: absolute;
   content: '';
   width: 100%;
@@ -48,4 +49,75 @@
 }
 .button.swipe:hover::after {
   transform: translateX(0%);
+}
+
+/* animation 3 */
+.button.anim_3:hover {
+  color: white;
+}
+.button.anim_3::after,
+.button.anim_3::before {
+  top: 0px;
+  left: 0px;
+  background-color: #020c1b;
+  transform: rotateX(90deg);
+  transition: transform 0.6s ease-out;
+  z-index: -1;
+}
+.button.anim_3:hover::after {
+  transform: rotateX(0deg);
+}
+.button.anim_3::before {
+  transform: rotateY(90deg);
+}
+.button.anim_3:hover::before {
+  transform: rotateY(0deg);
+}
+
+/* Swipe down with text */
+.button.swipe-with-text {
+  position: relative;
+}
+
+.button.swipe-with-text:after {
+  content: 'You did it';
+  background-color: #7410f7;
+  color: white;
+  left: 0px;
+  top: -100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.button.swipe-with-text:hover::after {
+  top: 0px;
+}
+
+/* Angle Swipe */
+
+.button.angle-swipe {
+  background-color: white;
+  transition: all 0.7s ease-in-out;
+}
+.button.angle-swipe:hover {
+  background-color: #7410f7;
+  color: white;
+}
+
+.button.angle-swipe:after {
+  content: '';
+  background-color: #020c1b;
+  width: 150%;
+  height: 30px;
+  left: 0px;
+  bottom: 0;
+  transform: rotate(45deg) translate(-25%, 340%);
+  transition: all 0.6s ease-in-out;
+  transform-origin: center;
+}
+
+.button.angle-swipe:hover:after {
+  background-color: #020c1b;
+  transform: rotate(45deg) translate(-25%, -220%);
 }
