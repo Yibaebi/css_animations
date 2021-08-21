@@ -18,6 +18,9 @@
   content: '';
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Design 1 */
@@ -120,4 +123,94 @@
 .button.angle-swipe:hover:after {
   background-color: #020c1b;
   transform: rotate(45deg) translate(-25%, -220%);
+}
+
+/* Design 6 */
+.button.des_6 {
+  color: #eee;
+}
+.button.des_6::after {
+  content: 'Hover on me';
+  background-color: #020c1b;
+  color: white;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  bottom: 0;
+  transition: all 0.6s ease-in-out;
+  transform-origin: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button.des_6:hover::after {
+  transform: translate(100%, -100%);
+}
+.button.des_6::before {
+  content: 'Hover on me';
+  background-color: #020c1b;
+  color: white;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  bottom: 0;
+  transition: all 0.6s ease-in-out;
+  transform-origin: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-100%, 100%);
+}
+
+.button.des_6:hover::before {
+  transform: translate(0, 0);
+}
+
+/* Design 7 */
+.button.des_7 {
+  color: #020c1b;
+  perspective: 500px;
+}
+.button.des_7::after {
+  content: 'Hover on me';
+  left: 0px;
+  bottom: 0;
+  transition: all 0.6s ease-in-out;
+  transform-origin: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(800px);
+}
+
+.button.des_7:hover::after {
+  background-color: #020c1b;
+  color: white;
+  transform: translateZ(0px);
+  width: 100%;
+  height: 100%;
+}
+
+/* Design 8 */
+.button.des_8 {
+  background-color: transparent;
+}
+.button.des_8:hover {
+  color: white;
+}
+.button.des_8::before {
+  content: '';
+  left: 0px;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #020c1b;
+  transition: all 0.5s;
+  border-radius: 0 0 50% 50%;
+  z-index: -1;
+}
+
+.button.des_8:hover::before {
+  height: 200%;
 }
