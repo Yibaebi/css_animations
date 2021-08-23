@@ -274,7 +274,6 @@
   color: white;
   transition: all 0.5s;
   opacity: 1;
-  transform-origin: top;
 }
 .button.des_10::after {
   opacity: 0;
@@ -291,4 +290,75 @@
   opacity: 1;
   left: 0%;
   transform: translateX(0%) scale(1) rotateY(360deg);
+}
+
+/* Design 11 */
+.button.des_11 {
+  position: relative;
+  border-color: transparent;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  transition: all 0.5s;
+}
+
+.button.des_11::after,
+.button.des_11::before {
+  top: 50%;
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #020c1b;
+  transition: all 0.3s;
+  z-index: -1;
+  opacity: 0;
+}
+
+.button.des_11::after {
+  box-shadow: -50px 0 0 #7410f7;
+  left: 0;
+  transform: translateY(-50%) translateX(-50px);
+}
+
+.button.des_11::before {
+  box-shadow: 50px 0 0 #7410f7;
+  right: 0;
+  transform: translateY(-50%) translateX(50px);
+}
+
+.button.des_11:hover::after {
+  left: 50%;
+  box-shadow: 30px 0 0 #020c1b;
+  transform: translateY(-50%) translateX(-50%);
+  opacity: 1;
+}
+
+.button.des_11:hover::before {
+  right: 50%;
+  box-shadow: -30px 0 0 #020c1b;
+  transform: translateY(-50%) translateX(50%);
+  opacity: 1;
+}
+
+.button.des_11 span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #020c1b;
+  border-radius: 5px;
+  transform: scale(0);
+  transition: all 0.3s ease-out 0.3s;
+  z-index: -1;
+}
+
+.button.des_11:hover {
+  color: white;
+}
+.button.des_11:hover span {
+  transform: scale(1);
 }
